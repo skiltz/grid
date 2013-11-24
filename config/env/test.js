@@ -1,6 +1,6 @@
 module.exports = {
-    db: "mongodb://localhost/mean-test",
-    port: 3001,
+    db: "mongodb://grid:grid@dharma.mongohq.com:10071/grid",
+    port: 80,
     app: {
         name: "MEAN - A Modern Stack - Test"
     },

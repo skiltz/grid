@@ -1,12 +1,12 @@
 {
-    "name": "mean",
-    "description": "MEAN - A Modern Stack: MongoDB, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
-    "version": "0.1.0",
+    "name": "GRID",
+    "description": "Game & Roms Informations Database",
+    "version": "0.0.1",
     "private": false,
-    "author": "Amos Haviv",
+    "author": "Julien <SkiltZ> Noblet",
     "repository": {
         "type": "git",
-        "url": "https://github.com/linnovate/mean.git"
+        "url": "https://github.com/skiltz/grid.git"
     },
     "engines": {
         "node": "0.10.x",
