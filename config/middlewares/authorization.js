@@ -31,3 +31,25 @@ exports.article = {
         next();
     }
 };
+/**
+ * OS authorizations routing middleware
+ */
+exports.os = {
+    hasAuthorization: function(req, res, next) {
+        if (req.os.user.id != req.user.id) {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
+    }
+};
+/**
+ * System authorizations routing middleware
+ */
+exports.system = {
+    hasAuthorization: function(req, res, next) {
+        if (req.os.user.id != req.user.id) {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
+    }
+};

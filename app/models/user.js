@@ -18,6 +18,10 @@ var UserSchema = new Schema({
         type: String,
         unique: true
     },
+    level: {
+        type: Number,
+        default: 0,
+    },
     provider: String,
     hashed_password: String,
     salt: String,

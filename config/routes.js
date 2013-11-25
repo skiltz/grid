@@ -70,6 +70,27 @@ module.exports = function(app, passport, auth) {
 
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
+    
+    //System Routes
+    var systems = require('../app/controllers/systems');
+    app.get('/systems', systems.all);
+    app.post('/systems', auth.requiresLogin, systems.create);
+    app.get('/systems/:systemId', systems.show);
+    app.put('/systems/:systemId', auth.requiresLogin, auth.system.hasAuthorization, systems.update);
+    app.del('/systems/:systemId', auth.requiresLogin, auth.system.hasAuthorization, systems.destroy);
+
+    //Finish with setting up the articleId param
+    app.param('articleId', articles.article);
+    //OS Routes
+    var os = require('../app/controllers/os');
+    app.get('/os', os.all);
+    app.post('/os', auth.requiresLogin, os.create);
+    app.get('/os/:os', os.show);
+    app.put('/os/:osId', auth.requiresLogin, auth.system.hasAuthorization, os.update);
+    app.del('/os/:osId', auth.requiresLogin, auth.system.hasAuthorization, os.destroy);
+
+    //Finish with setting up the articleId param
+    app.param('articleId', articles.article);
 
     //Home route
     var index = require('../app/controllers/index');
