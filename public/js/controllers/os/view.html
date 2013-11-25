@@ -1,0 +1,14 @@
+<section data-ng-controller="OSController" data-ng-init="findOne()">
+    <span>{{os.created | date:'medium'}}</span>/
+    <span>{{os.user.name}}</span>
+    <h2>{{os.title}}</h2>
+    <div data-ng-show="global.user._id == os.user._id">
+        <a class="btn" href="/#!/os/{{os._id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{os.content}}</div>
+</section>

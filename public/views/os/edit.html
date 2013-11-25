@@ -1,0 +1,47 @@
+<section data-ng-controller="OSController" data-ng-init="findOne()">
+	<form class="form-horizontal" data-ng-submit="update()">
+		<div class="control-group">
+			<label class="control-label" for="title">Title</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="os.title" id="title" placeholder="Title" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="arch">Arch</label>
+			<div class="controls">
+				<textarea data-ng-model="arch" id="arch" cols="30" rows="10" placeholder="Arch"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="logo">logo</label>
+			<div class="controls">
+				<textarea data-ng-model="logo" id="logo" cols="30" rows="10" placeholder="Logo"></textarea>
+			</div>
+		</div>
+        <div class="control-group">
+			<label class="control-label" for="website">Website</label>
+			<div class="controls">
+				<input type="text" data-ng-model="website" id="website" placeholder="Website">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="author">Author</label>
+			<div class="controls">
+				<input type="text" data-ng-model="author" id="author" placeholder="Author">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="version">Version</label>
+			<div class="controls">
+				<input type="text" data-ng-model="version" id="version" placeholder="Version">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>
